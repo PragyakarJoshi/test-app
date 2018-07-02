@@ -24,12 +24,15 @@
                     <br><br><br>
                 <div class="form-group">
                     <input type="email" class="form-control" id="emailInput" placeholder="Email Address" v-model='email'>
+                    <span v-if='error.email'>{{error.email}}</span>
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" id="newPasswordInput" placeholder="New Password" v-model='newPassword'>
+                    <span v-if='error.newPassword'>{{error.newPassword}}</span>
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password" v-model='confirmPassword'>
+                    <span v-if='error.confirmPassword'>{{error.confirmPassword}}</span>
                 </div>
                 <input type="submit" class="btn btn-default" value="Sign Up" :disabled='disableSubmit'>
             </form>
