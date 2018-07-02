@@ -13,13 +13,30 @@
 
 </head>
 <body>
-    <div id="app">
-        <component :is='componentName'></component>
-    </div>
+    <div class="container">
+        <div id="app">
+            <component :is='componentName'></component>
+        </div>
 
-    <template id="signUp">
-        <h1 class="text-center">Some Content</h1>
-    </template>
+        <template id="signUp">
+            
+            <form>
+                    <br><br><br>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="emailInput" placeholder="Email Address" v-model='email'>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="newPasswordInput" placeholder="New Password" v-model='newPassword'>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password" v-model='confirmPassword'>
+                </div>
+                <input type="submit" class="btn btn-default" value="Sign Up" :disabled='disableSubmit'>
+            </form>
+        
+        </template>
+        
+    </div>
 
     <script src="js/script.js"></script>
 </body>
