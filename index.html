@@ -8,7 +8,7 @@
     <title>Vue Validation</title>
     
     <script src="https://unpkg.com/vue"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -19,26 +19,31 @@
         </div>
 
         <template id="signUp">
-            
-            <form>
-                    <br><br><br>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="emailInput" placeholder="Email Address" v-model='email'>
-                    <span v-if='error.email'>{{error.email}}</span>
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="newPasswordInput" placeholder="New Password" v-model='newPassword'>
-                    <span v-if='error.newPassword'>{{error.newPassword}}</span>
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password" v-model='confirmPassword'>
-                    <span v-if='error.confirmPassword'>{{error.confirmPassword}}</span>
-                </div>
-                <input type="submit" class="btn btn-default" value="Sign Up" :disabled='disableSubmit'>
-            </form>
-        
+            <div class="box">
+                <h1 class="form-title">CREATE NEW ACCOUNT</h1>
+                <h4 class="form-subtitle">Join the community of millions</h4>
+                <br><br>
+                <form>
+                    
+                    <div class="input-group">
+                        <input type="email" class="form-input" id="emailInput" placeholder="Email Address" v-model='email'>
+                        <br>
+                        <span v-if='error.email' class="error-msg">{{error.email}}</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" class="form-input" id="newPasswordInput" placeholder="New Password" v-model='newPassword'>
+                        <br>
+                        <span v-if='error.newPassword' class="error-msg">{{error.newPassword}}</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" class="form-input" id="confirmPasswordInput" placeholder="Confirm Password" v-model='confirmPassword'>
+                        <br>
+                        <span v-if='error.confirmPassword' class="error-msg">{{error.confirmPassword}}</span>
+                    </div>
+                    <input type="submit" class="btn-submit" value="Sign Up" :disabled='disableSubmit'>
+                </form>
+            </div>
         </template>
-        
     </div>
 
     <script src="js/script.js"></script>
