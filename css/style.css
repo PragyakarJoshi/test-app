@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .container {
     height: 100vh;
     padding-left: 100px;
@@ -10,10 +16,60 @@
     text-align: center;
 }
 .box {
-    min-height: 350px;
-    width: 340px;
+    min-height: 200px;
+    width: 300px;
     background-color: #ffffff;
     border-radius: 7px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
-    padding: 50px;
+    padding: 45px 45px 30px 45px;
+}
+.form-title {
+    font-size: 23px;
+    color: rgba(0,0,0,0.4);
+    margin: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.form-subtitle {
+    font-size: 16px;
+    color: rgba(0,0,0,0.3);
+    margin: 15px;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.form-input {
+    font-family: 'Open Sans', sans-serif;
+    width: 270px;
+    padding: 10px 15px 10px 15px;
+    background-color: #f1f1f1;  
+    color: rgba(0,0,0,0.5);
+    border:0;
+    border-radius: 4px;
+}
+.error-msg {
+    padding-top: 17px;
+    font-size: 12px;
+    color: #e26b6b;    
+}
+
+.btn-submit {
+    width: 300px;
+    padding: 10px 15px 10px 15px;
+    color: #ffffff;
+    border: 0;
+    background: linear-gradient(to right, #207fac, #05619b); 
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    font-weight: 200;
+}
+
+.login-link {
+    font-size: 13px;
+    color: rgba(0,0,0,0.5);
+    margin-top: 18px;
+}
+.btn-login {
+    color: #207fac;
 }

@@ -33,7 +33,7 @@ Vue.component('signUp', {
                 this.error['email'] = '';
                 this.emailValidated = true;
             } else {
-                this.error['email'] = 'Enter Correct format of Email';
+                this.error['email'] = '* Enter Correct format of Email * ';
                 this.emailValidated = false;
             }
             this.checkSubmit();
@@ -42,7 +42,7 @@ Vue.component('signUp', {
             requiredChars = 6;
             remainingChars = requiredChars - value.length;
             if (value.length < requiredChars) {
-                this.error['newPassword'] = 'Atleast 6 characters required (' +remainingChars+ '/'+ requiredChars + ')' ;
+                this.error['newPassword'] = '* Atleast 6 characters required (' +value.length+ '/'+ requiredChars + ') *' ;
                 this.newPasswordValidated = false;
             } else {
                 this.error['newPassword'] = '';
@@ -55,7 +55,7 @@ Vue.component('signUp', {
                 this.error['confirmPassword'] = '';
                 this.confirmPasswordValidated = true;
             } else {
-                this.error['confirmPassword'] = 'Passwords do not match';
+                this.error['confirmPassword'] = '* Passwords do not match *';
                 this.confirmPasswordValidated = false;
             }
             this.checkSubmit();

@@ -24,24 +24,25 @@
                 <h4 class="form-subtitle">Join the community of millions</h4>
                 <br><br>
                 <form>
-                    
                     <div class="input-group">
-                        <input type="email" class="form-input" id="emailInput" placeholder="Email Address" v-model='email'>
-                        <br>
-                        <span v-if='error.email' class="error-msg">{{error.email}}</span>
+                        <input type="email" class="form-input" id="emailInput" placeholder="email" v-model='email'>
+                        <br>    
+                        <p v-if='error.email' class="error-msg">{{error.email}}</p>
                     </div>
                     <div class="input-group">
-                        <input type="password" class="form-input" id="newPasswordInput" placeholder="New Password" v-model='newPassword'>
+                        <input type="password" class="form-input" id="newPasswordInput" placeholder="password" v-model='newPassword'>
                         <br>
-                        <span v-if='error.newPassword' class="error-msg">{{error.newPassword}}</span>
+                        <p v-if='error.newPassword' class="error-msg">{{error.newPassword}}</p>
                     </div>
                     <div class="input-group">
-                        <input type="password" class="form-input" id="confirmPasswordInput" placeholder="Confirm Password" v-model='confirmPassword'>
+                        <input type="password" class="form-input" id="confirmPasswordInput" placeholder="confirm password" v-model='confirmPassword'>
                         <br>
-                        <span v-if='error.confirmPassword' class="error-msg">{{error.confirmPassword}}</span>
+                        <p v-if='error.confirmPassword' class="error-msg">{{error.confirmPassword}}</p>
                     </div>
-                    <input type="submit" class="btn-submit" value="Sign Up" :disabled='disableSubmit'>
+                    <input type="submit" class="btn-submit" value="Proceed" :disabled='disableSubmit'>
                 </form>
+                <br>
+                <h3 class="login-link">Already have an account? <span class="btn-login">Log In</span></h3>
             </div>
         </template>
     </div>
